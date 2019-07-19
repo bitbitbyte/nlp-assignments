@@ -307,7 +307,7 @@ you need get the result:
           return line_info
   
       def save_line_graph(self, line_info):
-          os.makedirs('./线路图/', exist_ok=True)
+          os.makedirs('./Beijing_Subway_map_data/', exist_ok=True)
           line_names = line_info.keys()
           with open('./线路图/beijing_subline.txt', 'w') as f:
               for name in line_names:
@@ -432,7 +432,7 @@ you need get the result:
       bj_spider = BeijingDitieSpider()
       bj_spider.run()
       
-      dp = DataPreprocess('./线路图/beijing_subline.txt')
+      dp = DataPreprocess('./Beijing_Subway_map_data/beijing_subline.txt')
       dp.run()
   
       ph = PathSearch(dp.station_graph, dp.get_two_stations_distance)
